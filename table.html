@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="a">
+        <h1>Name</h1>
+        <input type="text"  id="name"/>
+        <h1>Employ ID</h1>
+        <input type="text" id="Employ"/>
+        <h1>Email</h1>
+        <input type="text" id="email"/><br><br>
+        <button id="btn">Submit</button>
+    </div>
+    <div class="b">
+        <table border="1" id="table">
+            <tr>
+                <th>Name</th>
+                <th>Employ ID</th>
+                <th>Email ID</th>
+            </tr>
+        </table>
+    </div>
+</body>
+<script>
+let btn = document.getElementById('btn');
+
+btn.addEventListener('click',() => {
+
+let name = document.getElementById('name').value;
+
+let employ = document.getElementById('Employ').value;
+
+let email = document.getElementById('email').value;
+
+let table = document.getElementById('table');
+
+let addrow = table.insertRow(table.length);
+
+ let box1 = addrow.insertCell(0);
+ let box2 = addrow.insertCell(1);
+ let box3 = addrow.insertCell(2);
+
+
+ box1.innerHTML = name ;                                                                                                                                         
+ box2.innerHTML = employ;
+ box3.innerHTML = email;
+
+
+
+let name1 = document.getElementById('name');
+let employ2 =document.getElementById('Employ');
+let email3 =document.getElementById('email');
+
+
+name1.value = '';
+employ2.value = '';
+email3.value = '';
+
+});
+
+
+
+
+</script>
+</html>
